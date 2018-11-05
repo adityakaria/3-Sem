@@ -1,0 +1,254 @@
+about
+about
+above
+above
+absolutely
+absolutely
+acceptable
+acceptable
+add
+add
+adjacent
+adjacent
+	and
+	and
+	any
+	any
+assignment
+assignment
+available
+available
+be
+be
+been
+been
+below
+below
+bird
+bird
+body
+body
+but
+but
+by
+by
+c
+c
+	command
+	command
+	compilation
+	compilation
+	compile
+	compile
+	compiled
+	compiled
+	complexity
+	complexity
+	conform
+	conform
+	consist
+	consist
+	containing
+	containing
+	contains
+	contains
+	convenience
+	convenience
+	convert
+	convert
+	corrections
+	corrections
+	create
+	create
+cross
+cross
+deal
+deal
+debugging
+debugging
+december
+december
+decide
+decide
+deducted
+deducted
+deleted
+deleted
+departmental
+departmental
+dictionary
+dictionary
+discover
+discover
+discussed
+discussed
+first
+first
+following
+following
+font
+font
+for
+for
+forth
+forth
+found
+found
+four
+four
+friday
+friday
+from
+from
+function
+function
+functions
+functions
+g
+g
+gain
+gain
+general
+general
+generate
+generate
+insert
+insert
+inserted
+inserted
+insertions
+insertions
+instructions
+instructions
+	method
+	method
+	midnight
+	midnight
+	might
+	might
+	misspelled
+	misspelled
+	mistake
+	mistake
+	mode
+	mode
+	more
+	more
+	most
+	most
+	must
+	must
+named
+named
+names
+names
+necessary
+necessary
+need
+need
+never
+never
+	options
+	options
+	or
+	or
+	original
+	original
+	other
+	other
+	otherwise
+	otherwise
+	output
+	output
+	overview
+	overview
+	p
+	p
+	page
+	page
+	pair
+	pair
+	pedantic
+	pedantic
+	points
+	points
+	policies
+	policies
+	possibility
+	possibility
+	possible
+	possible
+	prefer
+	prefer
+	primary
+	primary
+	probing
+	probing
+	problem
+	problem
+	produce
+	produce
+	produces
+	produces
+	professor
+	professor
+	simple
+	simple
+	simplify
+	simplify
+	single
+	single
+	size
+	size
+	so
+	so
+statistics
+statistics
+string
+string
+strong
+strong
+submission
+submission
+submit
+submit
+submitted
+submitted
+successfully
+successfully
+suggest
+suggest
+suggested
+suggested
+	support
+	support
+	suppose
+	suppose
+together
+together
+tooth
+tooth
+track
+track
+traditionally
+traditionally
+transposed
+transposed
+trial
+trial
+	variants
+	variants
+	while
+	while
+	whitespace
+	whitespace
+	who
+	who
+	why
+	why
+	wild
+	wild
+	will
+	will
+your
+your
