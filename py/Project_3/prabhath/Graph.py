@@ -13,13 +13,13 @@ class Vertex:
 		self.ts=math.inf
 		self.cs=math.inf
 
-	def Addneighbour(self,name,weight=0):
+	def Addneighbour(self, name, weight=0):
 		self.neighbours[name]=weight
 
 	def __str__(self):
-		return str(self.name)+' neighbours are '+str([x for x in self.neighbours.keys()])
+		return str(self.name) + ' neighbours are ' + str([x for x in self.neighbours.keys()])
 
-	def NeighbourWeight(self,nbr):
+	def NeighbourWeight(self, nbr):
 		if nbr in self.neighbours:
 			return self.neighbours[nbr]
 
