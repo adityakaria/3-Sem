@@ -131,7 +131,5 @@ def main():
 	g.adjacency_matrix()
 	
 
-
-
 if __name__ == '__main__':
 	main()

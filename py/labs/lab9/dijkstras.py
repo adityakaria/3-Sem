@@ -178,13 +178,6 @@ class Graph:
 				n = n.pred
 			print("\b\b\b     ")
 
-
-
-
-
-
-
-
 def main():
 	g= Graph()
 	print(g)
@@ -211,8 +204,5 @@ def main():
 	g.dijkstras(p)
 	
 
-
-
 if __name__ == '__main__':
 	main()
-
