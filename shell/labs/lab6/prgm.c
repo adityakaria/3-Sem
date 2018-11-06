@@ -4,7 +4,6 @@
 
 int main(void)
 {
-	
 	pid_t pid1, pid2, pid3;
 	/* process id */
 	// printf("just one process before the fork()\n");
