@@ -1,5 +1,6 @@
 from MinHeapNodes import MinHeap
 from MinHeapNodes import Edge
+import math
 
 class Node:
 	def __init__(self, name):
@@ -10,7 +11,7 @@ class Node:
 		self.et = None
 		self.parent = None
 		self.string = ""
-		self.dist = 9999999
+		self.dist = math.inf
 		self.pred = None
 		self.edgesFrom = []
 
@@ -142,7 +143,7 @@ class Graph:
 			print("ERROR: Source not valid")
 			return
 		for u in self.nodes:
-			u.dist = 9999999
+			u.dist = math.inf
 			u.pred = None
 
 		s.dist = 0

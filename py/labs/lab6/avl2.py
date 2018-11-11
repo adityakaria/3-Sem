@@ -155,27 +155,6 @@ class bt:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Node:
 	def __init__(self, data = None, parent = None):
 		self.data = data

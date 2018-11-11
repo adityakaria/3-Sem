@@ -28,7 +28,7 @@ class Graph:
 			neighbour = int(name[1])
 		else:
 			neighbour = None
-		name  = int(name[0])
+		name = int(name[0])
 		
 		flag = 0
 		for i in self.nodes:

@@ -16,6 +16,7 @@ def main():
 	print("Loading dictionary. Please wait...\n")
 	for word in a:
 		table.insert(word)
+	print("Ready! Please enter values...")
 	while True:
 		key = input("Enter element to search: (Enter k to exit)\n")
 		if key == 'k':

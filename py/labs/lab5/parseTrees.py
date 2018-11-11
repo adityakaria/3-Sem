@@ -26,13 +26,13 @@ class ParseTree:
 		operators=['+','-','*','/']
 		for i in l:
 			if i is '(':
-				t.left=TreeNode(None,None,None,t)
+				t.left=TreeNode(None,None,None,t) # makes a left node and goes to in
 				t=t.left
 			elif i in operators:
-				t.value=i
+				t.value=i						#if operator, then make cur.value=operator, and the next value should be cur.right, so go there
 				t.right=TreeNode(None,None,None,t)
 				t=t.right
-			elif i is ')':
+			elif i is ')':						#go to parent
 				t=t.parent if t.parent is not None else t
 			else:
 				t.value=i

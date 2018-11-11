@@ -27,9 +27,7 @@ class MaxHeap:
                 if array[index] < array[((index + 1) * 2) - 1]:
                     array[index], array[((index + 1) * 2) - 1] = array[((index + 1) * 2) - 1], array[index]
                     array = self.heapify(array, ((index + 1) * 2) - 1, no)
-                    return array
-                else:
-                    return array
+                return array
             elif (((index + 1) * 2)) > no:
                 return array
             elif (((index + 1) * 2)) < no:
