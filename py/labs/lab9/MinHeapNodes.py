@@ -178,6 +178,7 @@ class MinHeap:
         print("Heapsorted: ", array)
         return array
 
+    # bubble up or trickle down based on change
     def updatePriority(self, node, newDist):
         node.dist = newDist
         index = None
