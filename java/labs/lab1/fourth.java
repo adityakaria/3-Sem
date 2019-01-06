@@ -53,9 +53,10 @@ class fourth{
 			System.out.println("Enter elememts of B");
 
 		for(int i = 0 ;i< r;i++)
-			for(int j =0 ;j<c;j++)
-				{B[i][j]=s.nextInt();
-			     C[i][j]=A[i][j]+B[i][j];}
+			for(int j =0 ;j<c;j++) {
+				B[i][j]=s.nextInt();
+				C[i][j]=A[i][j]+B[i][j];
+			}
 
 			     System.out.println("The elements of the new array are:");
 

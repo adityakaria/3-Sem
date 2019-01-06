@@ -1,0 +1,205 @@
+# ----------------------------------
+#              PATHS
+# ----------------------------------
+
+# Currently includes:
+# local bin
+# flutter bin
+# usr bin
+# usr sbin
+# dotnet
+
+    PATH=/Users/adityakaria/.rbenv/shims:/usr/local/bin:/Users/adityakaria/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+# Virtual Environment Wrapper Path
+    VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+# Wine Path
+    WINE_MASM_DIR=/Users/adityakaria/wine-masm
+# Package config
+    PKG_CONFIG_PATH=/usr/local/opt/openblas/lib/pkgconfig
+
+# UTF-8 Encoding
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# for powerline
+    export PATH=$PATH:$HOME/Library/Python/2.7/bin
+    export PATH=$PATH:$HOME/Library/Python/3.7/bin
+    # powerline-daemon -q
+    # POWERLINE_BASH_CONTINUATION=1
+    # POWERLINE_BASH_SELECT=1
+    # . /Users/adityakaria/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+
+
+
+# ----------------------------------
+#            MY ALIASES
+# ----------------------------------
+# Don't McFukin touch!
+
+    alias cppcompile='c++ -std=c++11 -stdlib=libc++' 
+    alias apps='cd ~/Applications'
+    alias l='ls -GFh'
+    alias la='ls -a -GFh'
+    alias ll='ls -l -GFh'
+    alias ls='ls -GFh'
+    alias lsa='ls -al -GFh'
+    alias oc='cd ~/code/c'
+    alias ocode='cd ~/code'
+    alias ojava='cd ~/code/java'
+    alias opy='cd ~/code/py'
+    alias oshell='cd ~/code/shell'
+    alias pyt='python3'
+    alias gs='git status'
+    alias gpo='git push origin'
+
+    alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+    alias reload="source ~/.bash_profile"
+    alias iossimulator="(cd /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/ && open -a iPhone\ Simulator.app)"
+    alias ~="cd ~/"
+    alias home="cd ~/"
+    alias cd..="cd ../"
+    alias ..="cd ../"
+    alias ...="cd ../../"
+    alias ....="cd ../../../"
+    alias .....="cd ../../../../"
+    alias ......="cd ../../../../../"
+
+
+# To make a continuous backup of the .bash_profile file (I learnt from my mistakes)
+# ----------------------------------------------------------
+    cat ~/.bash_profile > ~/code/bash_profile_backup.txt
+
+
+
+#   extract:  Extract most know archives with one command
+#   ---------------------------------------------------------
+    extract () {
+        if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xjf $1     ;;
+            *.tar.gz)    tar xzf $1     ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       unrar e $1     ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xf $1      ;;
+            *.tbz2)      tar xjf $1     ;;
+            *.tgz)       tar xzf $1     ;;
+            *.zip)       unzip $1       ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1        ;;
+            *)     echo "'$1' cannot be extracted via extract()" ;;
+            esac
+        else
+            echo "'$1' is not a valid file"
+        fi
+    }
+
+#   ---------------------------
+#   4. SEARCHING
+#   ---------------------------
+
+    alias qfind="find . -name "                 # qfind:    Quickly search for file
+    ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
+    ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
+    ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
+
+# spotlight: Search for a file using MacOS Spotlight's metadata
+# -----------------------------------------------------------
+    spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
+
+
+#   ---------------------------
+#   6. NETWORKING
+#   ---------------------------
+
+    # alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
+    # alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
+    # alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
+    # alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
+    # alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
+    # alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
+    # alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
+    # alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
+    # alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
+    # alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
+
+# ii:  display useful host related informaton
+# -------------------------------------------------------------------
+    ii() {
+        echo -e "\nYou are logged on ${RED}$HOST"
+        echo -e "\nAdditionnal information:$NC " ; uname -a
+        echo -e "\n${RED}Users logged on:$NC " ; w -h
+        echo -e "\n${RED}Current date :$NC " ; date
+        echo -e "\n${RED}Machine stats :$NC " ; uptime
+        echo -e "\n${RED}Current network location :$NC " ; scselect
+        echo -e "\n${RED}Public facing IP Address :$NC " ;myip
+        #echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
+        echo
+    }
+
+# rename all the files which contain uppercase letters to lowercase in the current folder
+    function filestolower(){
+    read -p "This will rename all the files and directories to lowercase in the current folder, continue? [y/n]: " letsdothis
+    if [ "$letsdothis" = "y" ] || [ "$letsdothis" = "Y" ]; then
+        for x in `ls`
+        do
+        skip=false
+        if [ -d $x ]; then
+        read -p "'$x' is a folder, rename it? [y/n]: " renamedir
+        if [ "$renamedir" = "n" ] || [ "$renameDir" = "N" ]; then
+        skip=true
+        fi
+        fi
+        if [ "$skip" == "false" ]; then
+            lc=`echo $x  | tr '[A-Z]' '[a-z]'`
+            if [ $lc != $x ]; then
+            echo "renaming $x -> $lc"
+            mv $x $lc
+            fi
+        fi
+        done
+    fi
+    }
+
+# Generates a tree view from the current directory
+    function tree(){
+        pwd
+        ls -R | grep ":$" |   \
+        sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+    }
+
+# cd into the last focused finder window
+    function cdfinder(){
+    cd "$(osascript -e 'tell application "Finder"' \
+    -e 'set myname to POSIX path of (target of window 1 as alias)' \
+    -e 'end tell' 2>/dev/null)"
+    }
+
+# Generates a random password
+function randpassw() {
+    if [ -z $1 ]; then
+        MAXSIZE=10
+    else
+        MAXSIZE=$1
+    fi
+    array1=( 
+    q w e r t y u i o p a s d f g h j k l z x c v b n m Q W E R T Y U I O P A S D 
+    F G H J K L Z X C V B N M 1 2 3 4 5 6 7 8 9 0 
+    \! \@ \$ \% \^ \& \* \! \@ \$ \% \^ \& \* \@ \$ \% \^ \& \* 
+    ) 
+    MODNUM=${#array1[*]} 
+    pwd_len=0 
+    while [ $pwd_len -lt $MAXSIZE ] 
+    do 
+        index=$(($RANDOM%$MODNUM)) 
+        echo -n "${array1[$index]}" 
+        ((pwd_len++)) 
+    done 
+    echo 
+}
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+
+# heroku autocomplete setup
+HEROKU_AC_BASH_SETUP_PATH=/Users/adityakaria/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;

@@ -15,7 +15,8 @@ public class hello
 	public static void main(String[] args)
 	{
 		System.out.println("Hello World");
-		get_id(naam);
-		System.out.println("Name: " + name + " " + age + " " + id);
+		hello h = new hello();
+		h.get_id("naam");
+		System.out.println("Name: " + h.name + " " + h.age + " " + h.id);
 	}
 }

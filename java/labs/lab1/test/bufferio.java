@@ -1,4 +1,4 @@
-import java.io.*; 
+import java.io.BufferedInputStream; 
 
 class bufferio
 {
@@ -19,4 +19,5 @@ class bufferio
 		System.out.println(b);
 
 	}
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
 }
