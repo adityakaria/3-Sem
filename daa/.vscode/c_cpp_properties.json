@@ -1,12 +1,17 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/usr/local/Cellar/gcc/8.2.0/include/c++/8.2.0/x86_64-apple-darwin18.0.0",
+                "/usr/local/Cellar/gcc/8.2.0/include/c++/8.2.0"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64"
