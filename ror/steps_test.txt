@@ -1,0 +1,18 @@
+rails new try_app
+
+*added required gems*
+bundle install
+
+rails generate simple_form:install
+
+rails g controller store index
+* connect root to index*
+rails generate devise:install
+*copy devise files from views*
+
+rails generate devise User
+rails db:migrate
+rails g migration add_name_to_users name:string
+rails db:migrate
+
+*copy application.html.erb*
